@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Characters/Character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Characters/Ouch/Ouch.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Gun/M16.tscn" type="PackedScene" id=3]
+
+[node name="RootScene" type="Node2D"]
+
+[node name="Level" type="Node2D" parent="."]
+
+[node name="Skybox" type="ColorRect" parent="Level"]
+margin_left = -1094.0
+margin_top = -1226.0
+margin_right = 3530.0
+margin_bottom = 903.0
+color = Color( 0.301961, 0.513726, 0.576471, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Visuals" type="Node2D" parent="Level"]
+
+[node name="Ground" type="ColorRect" parent="Level/Visuals"]
+margin_left = -1011.0
+margin_top = 356.0
+margin_right = 2956.0
+margin_bottom = 998.0
+color = Color( 0.32549, 0.690196, 0.145098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Characters" type="Node2D" parent="Level"]
+
+[node name="Character" parent="Level/Characters" instance=ExtResource( 1 )]
+position = Vector2( 974.737, 242.03 )
+
+[node name="M16" parent="Level/Characters/Character" instance=ExtResource( 3 )]
+position = Vector2( 10.0793, 22.6786 )
+
+[node name="Ouch" parent="Level/Characters" instance=ExtResource( 2 )]
+position = Vector2( 1417.6, 235.1 )
+scale = Vector2( -1, 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 1012.58, -77.5695 )
+current = true
+zoom = Vector2( 1.7, 1.7 )

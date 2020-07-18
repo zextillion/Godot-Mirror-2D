@@ -1,0 +1,60 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "MirrorNode2D",
+"language": "GDScript",
+"path": "res://MirrorNode2D.gd"
+}, {
+"base": "Node2D",
+"class": "SpriteFlip",
+"language": "GDScript",
+"path": "res://BadMirrors/SpriteFlip.gd"
+} ]
+_global_script_class_icons={
+"MirrorNode2D": "",
+"SpriteFlip": ""
+}
+
+[application]
+
+config/name="Mirror 2D Characters"
+config/description="Because mirroring 2D Characters was a lot harder than I expected."
+run/main_scene="res://RootScene.tscn"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/borderless=true
+
+[importer_defaults]
+
+texture={
+"compress/bptc_ldr": 0,
+"compress/hdr_mode": 0,
+"compress/lossy_quality": 0.7,
+"compress/mode": 0,
+"compress/normal_map": 0,
+"detect_3d": false,
+"flags/anisotropic": false,
+"flags/filter": false,
+"flags/mipmaps": false,
+"flags/repeat": 0,
+"flags/srgb": 2,
+"process/HDR_as_SRGB": false,
+"process/fix_alpha_border": true,
+"process/invert_color": false,
+"process/premult_alpha": false,
+"size_limit": 0,
+"stream": false,
+"svg/scale": 1.0
+}
